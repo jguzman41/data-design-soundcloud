@@ -10,14 +10,13 @@
 	<body>
 		<!-- this is the header-->
 		<header>
-			<h1>Soundcloud. Yep, anything can be music now.</h1>
+			<h1>Soundcloud.
+				Yep, anything can be music now.</h1>
+			<img src="img/soundcloud-logo.png" alt="soundcloud-logo.png" width="50%">
 		</header>
-
 		<!-- this is the main page content-->
 		<main>
-
 			<!-- begin section 1-->
-
 			<section>
 				<h1>Persona</h1>
 				<img src="img/yungdust.jpg" alt="YungDust">
@@ -49,6 +48,8 @@
 						<li>Profile</li>
 					</ul>
 
+
+				<!-- Soundcloud Player embed-->
 				<iframe width="50%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/38377533&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
 			</section>
 
