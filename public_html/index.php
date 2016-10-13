@@ -43,9 +43,51 @@
 				<h1>Entities</h1>
 				<h3>The entities involved include:</h3>
 					<ul>
-						<li>Tags</li>
-						<li>Songs</li>
-						<li>Profile</li>
+						<li>tag (WEAK)</li>
+							<ul>
+								<li>tagLabel</li>
+									<ul>
+										<li>n-1 relationship to song</li>
+									</ul>
+							</ul>
+						<li>song (STRONG)</li>
+							<ul>
+								<li>songWave</li>
+								<li>songReaction</li>
+								<li>songProfileId</li>
+									<ul>
+										<li>foreign key to song</li>
+										<li>m-n relationship between song and profiles</li>
+									</ul>
+								<li>songImage</li>
+								<li>songId</li>
+									<ul>
+										<li>primary key for song</li>
+										<li>n-1 relationship with user</li>
+									</ul>
+								<li>songDateTime</li>
+							</ul>
+						<li>profile (STRONG)</li>
+								<ul>
+									<li>profilePicture</li>
+									<li>profileFollowers</li>
+									<li>profileId</li>
+								</ul>
+										<ul>
+											<li>n-1 profiles to song</li>
+										</ul>
+					</ul>
+
+				<!-- begin section 4 -->
+				<h1>Interaction Flow</h1>
+					<ul>
+						<li>user signs in</li>
+						<li>user selects "upload"</li>
+						<li>user selects song to upload</li>
+						<li>user fills out required information</li>
+						<li>user adds tags</li>
+						<li>user selects "upload"</li>
+						<li>song upload and tagging process complete</li>
 					</ul>
 
 
