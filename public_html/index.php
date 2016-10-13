@@ -90,6 +90,7 @@
 						<li>song upload and tagging process complete</li>
 					</ul>
 
+				<img src="img/soundcloud-ERD.png" alt="ERD-Diagram" width="50%">
 
 				<!-- Soundcloud Player embed-->
 				<iframe width="50%" height="450" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/38377533&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;visual=true"></iframe>
