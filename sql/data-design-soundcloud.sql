@@ -1,0 +1,25 @@
+DROP TABLE IF EXISTS 'tag';
+DROP TABLE IF EXISTS profile;
+DROP TABLE IF EXISTS song;
+
+CREATE TABLE profile (
+	profileId INT UNSIGNED AUTO_INCREMENT NOT NULL,
+	profileFollowers INT UNSIGNED NOT NULL,
+	UNIQUE (profileId),
+	PRIMARY KEY (profileId)
+);
+
+CREATE TABLE song (
+	songProfileId VARCHAR(32) NOT NULL,
+	songDateTime DATETIME NOT NULL,
+	songId INT UNSIGNED AUTO_INCREMENT NOT NULL,
+	PRIMARY KEY (songId)
+);
+
+CREATE TABLE 'tag' (
+	tagLabel VARCHAR(16),
+	INDEX (tagLabel),
+	FOREIGN KEY (tagLabel), REFERENCES song(songProfileId),
+	PRIMARY KEY (tagLabel)
+
+);
