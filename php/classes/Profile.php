@@ -24,42 +24,39 @@ class Profile {
 
 	/** constructor goes here later*/
 
-	/** accessor method for profileId*/
+	/** accessor method for profileId
 	/**
-	 * @return int
-	 */
-	public function getProfileId(): int {
+	 * @return int|null
+	 **/
+	public function getProfileId() {
 		return $this->profileId;
 	}
 
 	/**
-	 * mutator ethod for profileId
+	 * mutator method for profileId
 	 *
 	 * @param int|null $newProfileId new value of profile id
 	 * @throws \RangeException if $newProfileId is not positive
 	 * @throws \TypeError if $newProfileId is not an integer
 	 */
 
-	/**
-	 * @param int $newProfileId
-	 */
 	public function setProfileId(int $newProfileId = null) {
-		if ($newProfileId === null){
+
+		if ($newProfileId === null) {
 		$this->profileId = null;
 			return;
+		}
 
+		//verify the new profile Id is positive
+	 	if($newProfileId <= 0) {
+			throw(new \RangeException("profile id is not positive"));
+		}
+
+		$this->profileId = $newProfileId;
 	}
 
-//verify the new profile Id is positive
-if($newProfileId <= 0) {
-	throw(new \RangeException("profile id is not positive"));
-}
 
-$this->profileId = $newProfileId;
-}
-
-
-	/**accessor method for profileEmail*/
+	/** accessor method for profileEmail*/
 	/**
 	 * @return string
 	 */
@@ -67,28 +64,33 @@ $this->profileId = $newProfileId;
 		return $this->profileEmail;
 	}
 
-	/**
+	/** mutator method for profileEmail
 	 * @param string $newProfileEmail
 	 */
-	public function setProfileEmail(string $newProfileEmail = null) {
+
+	public function setProfileEmail(string $newProfileEmail) {
 		if ($newProfileEmail === null) {
 			$this->profileEmail = null;
 				return;
 		}
 		$this->profileEmail = $newProfileEmail;
 	}
+
 	/** accessor method for profileName */
 	/**
 	 * @return string
 	 */
+
 	public function getProfileName(): string {
 		return $this->profileName;
 	}
 
-	/**
+	/** mutator method for profileName
+	 *
 	 * @param string $newProfileName
 	 */
-	public function setProfileName(string $newProfileName = null) {
+
+	public function setProfileName(string $newProfileName) {
 		if ($newProfileName === null) {
 			$this->profileName = $newProfileName;
 		}
